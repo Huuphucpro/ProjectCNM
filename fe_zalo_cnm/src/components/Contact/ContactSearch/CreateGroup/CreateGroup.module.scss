@@ -1,0 +1,324 @@
+.dialog {
+  display: flex;
+  flex-direction: column;
+  min-height: 668px;
+  min-width: 500px;
+
+  .title {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem 1rem 1rem;
+    border-bottom: 1px solid #eee;
+
+    span {
+      flex-grow: 1;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .close {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+        background: #f4f5f7;
+        transition: 0.3s;
+      }
+
+      &:before,
+      &:after {
+        position: absolute;
+        left: 15px;
+        top: 4px;
+        content: " ";
+        height: 25px;
+        width: 1.5px;
+        background-color: #9ba5af;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .create {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    .camera {
+      height: 48px;
+      width: 48px;
+      text-align: center;
+      line-height: 45px;
+      border-radius: 50%;
+      border: 1px solid #eee;
+
+      span {
+        font-size: 28px;
+        color: #72808e;
+      }
+    }
+    .phone {
+      flex-grow: 1;
+
+      input {
+        height: 38px;
+        line-height: 38px;
+        padding: 0 5px;
+        font-size: 15px;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #eee;
+
+        &:focus {
+          background: white;
+          border-bottom: 1px solid #0068ff;
+        }
+      }
+    }
+  }
+
+  .main {
+    flex-grow: 1;
+    padding: 0 1rem;
+    overflow: hidden;
+
+    display: flex;
+
+    .friends {
+      overflow-y: scroll;
+      width: 288px;
+      height: 390px;
+      flex-grow: 1;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        cursor: pointer;
+      }
+      &::-webkit-scrollbar-track {
+        background: #fff;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #b9c0c7;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #b9c0c7;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+
+        &_title {
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+      .list {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 0.5rem 0;
+        border-radius: 4px;
+
+        &:hover {
+          background: #f4f5f7;
+          transition: 0.3s;
+        }
+
+        &_item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .checkbox {
+          }
+          .avatar {
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+          }
+          .name {
+            font-weight: 400;
+            text-align: left;
+            font-size: 14px;
+            padding-right: 1rem;
+
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
+
+    .added {
+      width: 180px;
+      border: 1px solid #eee;
+      padding: 0.5rem;
+
+      .count {
+        font-weight: 600;
+        text-align: left;
+        font-size: 15px;
+        margin-bottom: 0.5rem;
+
+        span {
+          height: 20px;
+          padding: 0 8px;
+          background: #e5efff;
+          color: #0068ff;
+          border-radius: 4px;
+          margin-left: 4px;
+          font-weight: 600;
+          font-size: 12px;
+        }
+      }
+
+      &_list {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 340px;
+        gap: 8px;
+
+        &::-webkit-scrollbar {
+          width: 8px;
+          cursor: pointer;
+        }
+        &::-webkit-scrollbar-track {
+          background: #fff;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: #b9c0c7;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #b9c0c7;
+        }
+
+        &_item {
+          display: flex;
+          align-items: center;
+          background: #e5efff;
+          padding: 4px;
+          border-radius: 50px;
+          gap: 8px;
+
+          .avatar {
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 0 1px #fff;
+            border-radius: 50%;
+
+            img {
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+            }
+          }
+          .name {
+            font-size: 14px;
+            flex-grow: 1;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+          .close {
+            color: #0068ff;
+            padding-right: 0.5rem;
+
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .search {
+    padding: 0.5rem 0;
+
+    span {
+      font-size: 13px;
+      padding: 0 1rem;
+      font-weight: 600;
+    }
+
+    form {
+      position: relative;
+      padding: 0.3rem 1rem 0rem 1rem;
+
+      input {
+        height: 38px;
+        line-height: 38px;
+        padding: 0 40px;
+        font-size: 15px;
+        width: 100%;
+        outline: none;
+        border: 1px solid #eee;
+        border-radius: 20px;
+
+        &:focus {
+          background: white;
+          border-radius: 16px;
+          border: 1px solid #0068ff;
+          border-radius: 20px;
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1rem;
+        font-size: 16px;
+        color: #72808e;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .btn {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    line-height: normal;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: normal;
+    line-height: 38px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-left: 1rem;
+
+    button {
+      outline: none;
+      border: none;
+      cursor: pointer;
+      padding: 0 16px;
+    }
+
+    .cancel {
+      background: #e8eaef;
+      color: #001a33;
+    }
+    .search {
+      background: #0068ff;
+      color: #fff;
+    }
+  }
+}

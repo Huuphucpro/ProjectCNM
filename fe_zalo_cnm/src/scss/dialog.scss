@@ -1,0 +1,12 @@
+.MuiDialogContent-root:first-child {
+    padding: 0;
+}
+.MuiDialog-paper {
+    margin: 0;
+    position: relative;
+    overflow-y: auto;
+}
+
+.MuiCheckbox-colorPrimary.Mui-checked {
+    color: #203eeb;
+}

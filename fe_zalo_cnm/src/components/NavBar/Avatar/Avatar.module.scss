@@ -1,0 +1,38 @@
+$blue: #0091ff;
+$white: #fff;
+$green: #15a85f;
+$red: #db342e;
+
+.navbar_avatar {
+    width: 100%;
+    padding: 1rem 0.5rem;
+
+    &_img {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      font-size: 24px;
+      line-height: 48px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px $white;
+      cursor: pointer;
+
+      &_dot {
+        position: absolute;
+        bottom: 0;
+        right: 5px;
+
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $green;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }

@@ -1,0 +1,167 @@
+.type_message{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+
+    .top{
+        padding: 8px 16px;
+        background: #fff;
+        border-bottom: 1px solid #e5e7eb;
+        .list{
+            display: flex;
+            gap: 12px;
+
+            .item{
+                cursor: pointer;
+                padding: 8px;
+                border-radius: 50%;
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    background: #f3f4f6;
+                    
+                    span {
+                        color: #0068ff;
+                        
+                        i.far.fa-smile {
+                            color: #ffd43b;
+                        }
+                    }
+                }
+                
+                span {
+                    font-size: 18px;
+                    color: #7589a3;
+                    transition: all 0.2s ease;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i.far.fa-smile {
+                        transition: all 0.2s ease;
+                    }
+                }
+            }
+        }
+    }
+    .bottom{
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+
+        .form{
+            flex: 1;
+            margin-right: 15px;
+            background: #f0f2f5;
+            border-radius: 18px;
+            padding: 0 16px;
+            
+            input{
+                width: 100%;
+                padding: 8px 0;
+                border: none;
+                outline: none;
+                font-size: 15px;
+                background: transparent;
+                &::placeholder {
+                    color: #65676b;
+                }
+            }
+        }
+        .list{
+            display: flex;
+            gap: 12px;
+
+            .item{
+                cursor: pointer;
+                padding: 8px;
+                border-radius: 50%;
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    background: #f3f4f6;
+                    
+                    span {
+                        color: #0068ff;
+                        
+                        &.like {
+                            color: #0068ff;
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+                
+                span {
+                    font-size: 18px;
+                    color: #7589a3;
+                    transition: all 0.2s ease;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    &.like {
+                        color: #0068ff;
+                        transition: all 0.2s ease;
+                        
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .emoji_picker {
+        position: absolute;
+        bottom: 100%;
+        left: 16px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+        padding: 12px;
+        width: 350px;
+        max-height: 300px;
+        z-index: 1000;
+
+        .emoji_list {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 8px;
+            max-height: 280px;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 3px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #bcc0c4;
+                border-radius: 3px;
+            }
+
+            .emoji_item {
+                cursor: pointer;
+                font-size: 22px;
+                padding: 6px;
+                text-align: center;
+                border-radius: 8px;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background: #f3f4f6;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+@mixin avatar_main {
+  .avatar {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 0 1px #fff;
+    border-radius: 50%;
+
+    & .avatarHide{
+      opacity: 0;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .avatar .avatarHide{
+    opacity: 0;
+  }
+
+  .main {
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 0.8rem;
+    min-width: 50px;
+
+    .name {
+      margin-top: 10px;
+      color: #72808e;
+      font-size: 13px;
+    }
+    .text {
+      color: #001a33;
+      word-wrap: break-word;
+      margin-top: 0.5rem;
+      
+      .image_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+
+        .image_message {
+          max-width: 300px;
+          max-height: 300px;
+          border-radius: 10px;
+          object-fit: contain;
+          margin: 5px 0;
+        }
+
+        .image_text {
+          font-size: 13px;
+          color: #72808e;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .more {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0.5rem 0 0.5rem 0;
+      
+      .time, .status {
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .seen_avatar {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-right: 4px;
+        margin-left: 0;
+        order: -1;
+        
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.chat {
+  flex-grow: 1;
+  background: #f4f5f7;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .listMessage{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+    padding: 1rem 0;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #edeff1;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #d4d5d6;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    .start_time {
+      position: relative;
+      overflow: hidden;
+      height: 30px;
+      margin: auto 52px;
+      margin-bottom: 1rem;
+  
+      &:before{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          content: "";
+          width: 100%;
+          height: 0px;
+          border-bottom: 1px solid #ddd;
+      }
+  
+      span {
+        background: #b4b3b3;
+        border-radius: 10px;
+        padding: 2px 10px 3px;
+        color: white;
+        font-size: 13px;
+  
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+    }
+
+    &_item{
+      display: flex;
+      width: 80%;
+      gap: 10px;
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      @include avatar_main
+    }
+
+    &_item_me{
+      display: flex;
+      flex-direction: row-reverse;
+      width: 80%;
+      float: right;
+      gap: 10px;
+      margin-bottom: 1rem;
+      padding-right: 1rem;
+      @include avatar_main
+    }
+  }
+}
+

@@ -1,0 +1,54 @@
+.container {
+  height: 100vh;
+  z-index: 1000;
+
+  .alert {
+    position: fixed;
+    display: flex;
+    top: 2rem;
+    right: 3rem;
+    // transform: translateX(30rem);
+
+    min-width: 25rem;
+    height: auto;
+    background: white;
+    padding: 15px 30px;
+    z-index: 11;
+    border-radius: 50px;
+    // box-shadow: 2px 2px 20px #ccc;
+    // animation: roadRunnerIn 2.5s linear;
+
+    p {
+      flex-grow: 1;
+    }
+    &.error {
+      border: 1px solid red;
+      p,
+      span {
+        color: red;
+      }
+    }
+    &.success {
+        border: 1px solid #0190f3;
+        p,
+        span {
+          color: #0190f3;
+        }
+      }
+  }
+}
+
+@keyframes roadRunnerIn {
+  0% {
+    transform: translateX(25rem) skew(20deg);
+  }
+  10% {
+    transform: translateX(0) skew(0);
+  }
+  90% {
+    transform: translateX(0) skew(5deg);
+  }
+  100% {
+    transform: translateX(25rem) skew(0);
+  }
+}

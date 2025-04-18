@@ -1,0 +1,121 @@
+.request {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    padding: 0 16px;
+    height: 81px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+
+    span {
+      font-size: 24px;
+      font-weight: 600;
+      color: #001a33;
+    }
+  }
+  .list {
+    background: #fafafc;
+    flex-grow: 1;
+    overflow-y: scroll;
+    padding: 0 5vh;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #fafafc;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #d4d6d8;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    &_title {
+      padding: 16px 0;
+      span {
+        color: #001a33;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+
+    &_item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #fff;
+      border: 1px solid #e1e4ea;
+      border-radius: 3px;
+      padding: 15px;
+      margin-bottom: 1rem;
+
+      .avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        img {
+          object-fit: cover;
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+        }
+      }
+      .name {
+        flex-grow: 1;
+
+        span {
+          font-size: 16px;
+          font-weight: 500;
+          min-width: 0;
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
+      }
+      .btn {
+        display: flex;
+        gap: 0.5rem;
+
+        button {
+          background: transparent;
+          height: 32px;
+          min-width: 32px;
+          padding: 0 8px;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 30px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          border-radius: 4px;
+          box-sizing: border-box;
+          overflow: hidden;
+        }
+        .delete {
+          color: #0068ff;
+
+          &:hover {
+            background: #e5efff;
+            transition: 0.3s;
+          }
+        }
+        .accept {
+          background: #0068ff;
+          color: white;
+          &:hover {
+            background: #004bb9;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

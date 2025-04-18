@@ -1,0 +1,158 @@
+@mixin btnLogin {
+  height: 44px;
+  line-height: 44px;
+  padding: 0 20px;
+  font-size: 0.875rem;
+  background-color: #0190f3;
+  width: 100%;
+  min-width: 210px;
+  vertical-align: middle;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #fff;
+  font-weight: 500;
+  border: 0 none;
+
+  margin-bottom: 2rem;
+}
+
+.container {
+  width: 400px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  // width: 100%;
+  // min-height: 100vh;
+  // position: fixed;
+  z-index: 1;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  .title {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 400;
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .pass {
+    min-height: 200px;
+    padding: 30px 45px;
+    background: white;
+
+    .pass_input {
+      position: relative;
+      width: 100%;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+
+      input {
+        width: 100%;
+        padding: 8px 10px 6px 25px;
+        font-size: 0.938rem;
+        border: none;
+        outline: none;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        font-size: 14px;
+      }
+      .error {
+        color: red;
+        position: absolute;
+        font-size: 12px;
+        bottom: -22px;
+        left: 0;
+
+        animation: hideError 2s linear;
+        opacity: 0;
+      }
+    }
+
+    .btn {
+      @include btnLogin();
+
+      button {
+        height: 44px;
+        line-height: 44px;
+        padding: 0 20px;
+        font-size: 0.875rem;
+        background-color: #0190f3;
+        width: 100%;
+        min-width: 210px;
+        vertical-align: middle;
+        cursor: pointer;
+        white-space: nowrap;
+        color: #fff;
+        font-weight: 500;
+        border: 0 none;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.success_message {
+  color: #28a745;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  background-color: #f8fffa;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+@keyframes hideError {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    position: fixed;
+    top: 5%;
+    left: 2%;
+    right: 2%;
+    transform: translate(0);
+    width: 90%;
+    margin: auto;
+    padding: 0.2rem;
+
+    .pass {
+      padding: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .container {
+    position: fixed;
+    top: 5%;
+    left: 2%;
+    right: 2%;
+    transform: translate(0);
+    width: 90%;
+    margin: auto;
+    padding: 0.2rem;
+
+    .pass {
+      padding: 1rem;
+    }
+  }
+}

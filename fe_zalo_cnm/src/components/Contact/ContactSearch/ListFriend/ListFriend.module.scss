@@ -1,0 +1,129 @@
+.listfriend {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  width: 100%;
+  height: 89vh;
+  max-height: 89vh;
+  font-family: Segoe UI, SegoeuiPc, San Francisco, Helvetica Neue, Helvetica,
+    Lucida Grande, Roboto, Ubuntu, Tahoma, Microsoft Sans Serif, Arial,
+    sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #edeff1;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .title {
+    padding: 0.8rem 1rem;
+    span {
+      font-size: 15px;
+      color: #001a33;
+    }
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 1rem;
+    height: 68px;
+    // contain: size style;
+
+    &:hover {
+      background: #e8eaef;
+
+      .option {
+        display: block;
+      }
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: relative;
+
+      img {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .dot {
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        background: #15a85f;
+      }
+    }
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 12px 10px;
+
+      &_top {
+        display: flex;
+        .name {
+          font-weight: 400;
+          font-size: 17px;
+          color: #001a33;
+          flex: 1;
+
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .info {
+          font-size: 12px;
+          color: #72808e;
+        }
+      }
+    }
+
+    .option {
+      font-size: 17px;
+      position: relative;
+
+      .unfriend {
+        position: absolute;
+        left: -90px;
+        padding: 5px 0 6px 0;
+        z-index: 11;
+        width: 100px;
+        text-align: center;
+        border: 1px solid #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        box-shadow: 0 0 0 1px #fff;
+        border-radius: 20px;
+
+        &:hover{
+          background: #e8eaef;
+        }
+
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

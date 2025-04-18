@@ -1,0 +1,117 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  
+  .header {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 0 1rem;
+    gap: 1rem;
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      font-size: 25px;
+      line-height: 50px;
+      position: relative;
+      .img {
+        position: absolute;
+        box-shadow: 0 0 0 1px #fff;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 26px;
+          height: 26px;
+          font-size: 12px;
+          border-radius: 50%;
+        }
+
+        &:nth-child(1) {
+          top: 0;
+          left: 0;
+        }
+        &:nth-child(2) {
+          top: 0;
+          right: 0;
+        }
+        &:nth-child(3) {
+          bottom: 0;
+          left: 0;
+        }
+        &:nth-child(4) {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+
+    .main {
+      flex-grow: 1;
+      .name {
+        font-weight: 600;
+        font-size: 18px;
+        color: #001a33;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 28px;
+      }
+      .member {
+        font-size: 15px;
+        color: #72808e;
+
+        &:hover {
+          color: #0068ff;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    .btn {
+      display: flex;
+      gap: 3px;
+      .add,
+      .search,
+      .show {
+        height: 32px;
+        min-width: 32px;
+        padding: 0 8px;
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &:hover{
+            background: #f4f5f7;
+            transition: .3s;
+        }
+
+        span {
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #72808e;
+        }
+      }
+      //   .search {
+      //   }
+      //   .show {
+      //   }
+    }
+  }
+}

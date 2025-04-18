@@ -1,0 +1,94 @@
+.conversations {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-height: 89vh;
+  font-family: Segoe UI, SegoeuiPc, San Francisco, Helvetica Neue, Helvetica,
+    Lucida Grande, Roboto, Ubuntu, Tahoma, Microsoft Sans Serif, Arial,
+    sans-serif;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #edeff1;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .avatar {
+      padding: 10px;
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 12px 10px;
+
+      &_top {
+        display: flex;
+        .name {
+          font-weight: 400;
+          font-size: 17px;
+          color: #001a33;
+          flex: 1;
+
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+      &_bottom {
+        display: flex;
+        .lastmessage {
+          flex: 1;
+          width: calc(100% - 40px);
+          font-size: 15px;
+          line-height: 18px;
+          color: #72808e;
+          padding: 5px 10px 5px 0;
+
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+
+          &.not_seen{
+            color: #001a33;
+            font-weight: 700;
+          }
+        }
+        .newmessage {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          
+          padding: 2px 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 10px;
+          font-weight: 600;
+          background: #db342e;
+          color: white;
+        }
+      }
+    }
+  }
+}

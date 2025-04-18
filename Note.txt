@@ -1,0 +1,5 @@
+Note đồ án CNM:
+
+Đổi IP (ip wifi v4) file API trong contrain mỗi khi chạy
+
+MongoAtlas: admin - Huuphuc216

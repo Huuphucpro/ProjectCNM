@@ -1,0 +1,18 @@
+$blue: #0091ff;
+$white: #fff;
+$green: #15a85f;
+$red: #db342e;
+
+.navbar {
+  width: 65px;
+  height: 100vh;
+  flex: none;
+  box-sizing: border-box;
+  background: $blue;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+
+}
