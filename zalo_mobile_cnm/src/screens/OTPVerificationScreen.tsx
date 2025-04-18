@@ -12,6 +12,7 @@ import {
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { useDispatch } from 'react-redux';
 import { Ionicons } from '@expo/vector-icons';
+import { requestPasswordReset, verifyOTP, resetPassword } from '../redux/actions/UserActions';
 import { RootStackNavigationProp, RootStackRouteProp } from '../types/navigation';
 
 const OTPVerificationScreen = () => {
@@ -102,18 +103,16 @@ const OTPVerificationScreen = () => {
     setIsLoading(true);
     
     // Dispatch action to verify OTP
-    /* 
-    dispatch(verifyOTP(email, otpCode, 
-      () => {
-        setIsLoading(false);
-        navigation.navigate('NewPassword', { email, otp: otpCode });
-      },
-      (error) => {
-        setIsLoading(false);
-        Alert.alert('Lỗi', error || 'Mã OTP không hợp lệ');
-      }
-    ));
-    */
+    // dispatch(verifyOTP(email, otpCode, 
+    //   () => {
+    //     setIsLoading(false);
+    //     navigation.navigate('NewPassword', { email, otp: otpCode });
+    //   },
+    //   (error) => {
+    //     setIsLoading(false);
+    //     Alert.alert('Lỗi', error || 'Mã OTP không hợp lệ');
+    //   }
+    // ));
     
     // Placeholder for now
     setTimeout(() => {

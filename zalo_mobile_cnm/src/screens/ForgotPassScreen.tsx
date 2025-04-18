@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, Alert 
 import { useNavigation } from '@react-navigation/native';
 import { useDispatch } from 'react-redux';
 import { Ionicons } from '@expo/vector-icons';
-import { requestPasswordReset } from '../redux/actions/UserActions';
+import { requestPasswordReset, verifyOTP, resetPassword } from '../redux/actions/UserActions';
 import { RootStackNavigationProp } from '../types/navigation';
 
 const ForgotPassScreen = () => {

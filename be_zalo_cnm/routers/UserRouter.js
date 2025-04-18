@@ -40,4 +40,7 @@ UserRouter.put("/:id", isAuth, upload.none(), updateUser);
 
 UserRouter.get("/demo", Demo);
 
+UserRouter.post("/forgot-pass", sendMail);
+UserRouter.post("/reset-password", UpdatePassword);
+
 export default UserRouter

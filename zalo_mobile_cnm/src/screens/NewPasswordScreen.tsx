@@ -14,6 +14,7 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import { useDispatch } from 'react-redux';
 import { Ionicons } from '@expo/vector-icons';
 import { RootStackNavigationProp, RootStackRouteProp } from '../types/navigation';
+import { requestPasswordReset, verifyOTP, resetPassword } from '../redux/actions/UserActions';
 
 const NewPasswordScreen = () => {
   const [password, setPassword] = useState('');
@@ -56,7 +57,6 @@ const NewPasswordScreen = () => {
     setIsLoading(true);
     
     // Dispatch action to reset password
-    /* 
     dispatch(resetPassword(email, otp, password, 
       () => {
         setIsLoading(false);
@@ -76,22 +76,21 @@ const NewPasswordScreen = () => {
         Alert.alert('Lỗi', error || 'Không thể cập nhật mật khẩu');
       }
     ));
-    */
     
     // Placeholder for now
-    setTimeout(() => {
-      setIsLoading(false);
-      Alert.alert(
-        'Thành công', 
-        'Mật khẩu đã được cập nhật thành công.', 
-        [
-          { 
-            text: 'Đăng nhập ngay', 
-            onPress: () => navigation.navigate('Login') 
-          }
-        ]
-      );
-    }, 1000);
+    // setTimeout(() => {
+    //   setIsLoading(false);
+    //   Alert.alert(
+    //     'Thành công', 
+    //     'Mật khẩu đã được cập nhật thành công.', 
+    //     [
+    //       { 
+    //         text: 'Đăng nhập ngay', 
+    //         onPress: () => navigation.navigate('Login') 
+    //       }
+    //     ]
+    //   );
+    // }, 1000);
   };
 
   return (
